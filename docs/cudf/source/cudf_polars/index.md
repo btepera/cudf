@@ -59,17 +59,25 @@ We ran the Polars Decision Support (PDS) benchmarks to compare the Polars GPU en
    :widths: 50 50
    :align: center
 
-   * - .. figure:: ../_static/polars_pdsh_sf1k.png
-          :width: 100%
-          :alt: PDS-H benchmark at scale factor 1k
+   * - .. image:: ../_static/polars_pdsh_sf1k.png
+          :width: 650px
+          :alt: PDS-H benchmark at scale factor 1K
 
-          PDS-H (SF1k)
+     - .. image:: ../_static/polars_pdsds_sf1k.png
+          :width: 650px
+          :alt: PDS-DS benchmark at scale factor 1K
 
-     - .. figure:: ../_static/polars_pdsds_sf1k.png
-          :width: 100%
-          :alt: PDS-DS benchmark at scale factor 1k
+   * - **PDS-H (SF1K)**
 
-          PDS-DS (SF1k)
+          CPU: Dual-socket Intel(R) Xeon(R) Platinum 8480CL, Polars 1.40.1
+
+          GPU: 1xB200, cudf-polars 26.06
+
+     - **PDS-DS (SF1K)**
+
+          CPU: Dual-socket Intel(R) Xeon(R) Platinum 8570, Polars 1.40.1
+
+          GPU: 1xB200, cudf-polars 26.06
 ```
 
 On a single GPU, you can run TB-scale workloads with significant speedups compared to running on CPU. You can also scale up to run on multiple GPUs for processing even larger workloads:
@@ -80,16 +88,16 @@ On a single GPU, you can run TB-scale workloads with significant speedups compar
    :align: center
 
    * - .. figure:: ../_static/polars_pdsh_sf3k.png
-          :width: 100%
-          :alt: PDS-H benchmark at scale factor 3k
+          :width: 650px
+          :alt: PDS-H benchmark at scale factor 3K
 
-          PDS-H (SF3k)
+          PDS-H (SF3K)
 
      - .. figure:: ../_static/polars_pdsds_sf3k.png
-          :width: 100%
-          :alt: PDS-DS benchmark at scale factor 3k
+          :width: 650px
+          :alt: PDS-DS benchmark at scale factor 3K
 
-          PDS-DS (SF3k)
+          PDS-DS (SF3K)
 ```
 
 For more information on the benchmarks being run, see the PDS-DS queries in the [cuDF GitHub repository](https://github.com/rapidsai/cudf/tree/main/python/cudf_polars/cudf_polars/streaming/benchmarks).
